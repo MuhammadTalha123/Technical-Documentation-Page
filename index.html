@@ -6,44 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Documentation Page</title>
     <style>
-        body{
+        body {
             display: flex;
         }
-        #ul1{
+
+        #ul1 {
             list-style-type: none;
             overflow: scroll;
-    min-height: 50%;
-    max-height: 93%;
-    padding: 0px 0px 0px 0px;
+            min-height: 50%;
+            max-height: 93%;
+            padding: 0px 0px 0px 0px;
 
 
         }
-        #total{
+
+        #total {
             margin: 0px 75px 0px 350px;
         }
-        nav{
+
+        nav {
             position: fixed;
-    min-width: 290px;
-    top: 0px;
-    left: 0px;
-    width: 300px;
-    height: 100%;
-    border-right: solid;
-    border-color: rgba(0, 22, 22, 0.4);
+            min-width: 290px;
+            top: 0px;
+            left: 0px;
+            width: 300px;
+            height: 100%;
+            border-right: solid;
+            border-color: rgba(0, 22, 22, 0.4);
         }
-        .li1{
+
+        .li1 {
             padding: 10px 20px;
+            font-size: 17px;
+            font-family: "Open Sans", Arial, sans-serif;
+            color: lightgray;
         }
-        a{
+
+        a {
             text-decoration: none;
+            color: rgb(138, 132, 132);
+        }
+
+        #head11 {
+            padding: 0px 0px 0px 25px;
+            font-size: 17px;
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+
+        .head1 {
+            font-size: 17px;
+            font-family: "Open Sans", Arial, sans-serif;
+        }
+
+        article {
+            padding: 0px 0px 0px 15px;
+        }
+
+        #c1 {
+            background-color: #f5f5f5;
+            height: 40px;
+            padding: 15px 0px 15px 10px;
+        }
+        .c2{
+            background-color: #f5f5f5;
+            height: 40px;
+            padding: 15px 0px 0px 10px;
+        }
+        #c3{
+            background-color: #f5f5f5;
+            height: 40px;
+            padding: 15px 0px 0px 10px;
+        }
+        #c4{
+            background-color: #f5f5f5;
+            height: 40px;
+            padding: 15px 0px 15px 10px;
         }
     </style>
 </head>
 
 <body>
     <nav>
-        <header><h1>JS Documentation</h1></header>
+        <header id="head11">
+            <h1>JS Documentation</h1>
+        </header>
         <ul id="ul1">
+            <hr>
             <li class="li1"><a href="#s1">Introduction</a></li>
             <hr>
             <li class="li1"><a href="#s2">What you should already know</a></li>
@@ -75,7 +123,9 @@
     </nav>
     <main id="total">
         <section id="s1">
-            <header><h1>Introduction</h1></header>
+            <header class="head1">
+                <h1>Introduction</h1>
+            </header>
             <article>
                 <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight
                     language. Inside a host environment (for example, a web browser), JavaScript can be connected to the
@@ -96,7 +146,9 @@
             </article>
         </section>
         <section id="s2">
-            <header><h1>What you should already know</h1></header>
+            <header class="head1">
+                <h1>What you should already know</h1>
+            </header>
             <article>
                 <p>This guide assumes you have the following basic background:</p>
                 <ul>
@@ -108,7 +160,9 @@
             </article>
         </section>
         <section id="s3">
-            <header><h1>JavaScript and Java</h1></header>
+            <header class="head1">
+                <h1>JavaScript and Java</h1>
+            </header>
             <article>
                 <p>JavaScript and Java are similar in some ways but fundamentally different in some others. The
                     JavaScript language resembles Java but does not have Java's static typing and strong type checking.
@@ -127,20 +181,25 @@
             </article>
         </section>
         <section id="s4">
-            <header><h1>Hello world</h1></header>
+            <header class="head1">
+                <h1>Hello world</h1>
+            </header>
             <article>
                 <p>
                     To get started with writing JavaScript, open the Scratchpad and write your first "Hello world
                     JavaScript code:"</p>
-                <code>function greetMe(yourName) { alert("Hello " + yourName); }
-                    greetMe("World");</code>
+                <div class="c1">
+                    <code>function greetMe(yourName) { alert("Hello " + yourName); }<br>
+                    greetMe("World");</code></div>
                 <p>
                     Select the code in the pad and hit Ctrl+R to watch it unfold in your browser!
                 </p>
             </article>
         </section>
         <section id="s5">
-            <header><h1>Variables</h1></header>
+            <header class="head1">
+                <h1>Variables</h1>
+            </header>
             <p>You use variables as symbolic names for values in your application. The names of variables, called
                 identifiers, conform to certain rules.</p>
             <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent
@@ -151,29 +210,36 @@
                 _name.</p>
         </section>
         <section id="s6">
-            <header><h1>Declaring variables</h1></header>
+            <header class="head1">
+                <h1>Declaring variables</h1>
+            </header>
             <article>
                 You can declare a variable in three ways:
                 <p>With the keyword var. For example,</p>
-                <code>var x = 42.</code>
+                <div class="c2">
+                <code>var x = 42.</code></div>
                 <p>
                     This syntax can be used to declare both local and global variables.
                 </p>
                 <p>By simply assigning it a value. For example,</p>
-                <code>x = 42.</code>
+                <div class="c2">
+                <code>x = 42.</code></div>
                 <p>
                     This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use
                     this variant.
                 </p>
                 <p>With the keyword let. For example,</p>
-                <code> let y = 13.</code>
+                <div class="c2">
+                <code> let y = 13.</code></div>
                 <p>
                     This syntax can be used to declare a block scope local variable. See Variable scope below.
                 </p>
             </article>
         </section>
         <section id="s7">
-            <header><h1>Variable scope</h1></header>
+            <header class="head1">
+                <h1>Variable scope</h1>
+            </header>
             <article>
                 <p>When you declare a variable outside of any function, it is called a global variable, because it is
                     available to any other code in the current document. When you declare a variable within a function,
@@ -183,14 +249,18 @@
                     within a block is local to the function (or global scope) that the block resides within. For example
                     the following code will log 5, because the scope of x is the function (or global context) within
                     which x is declared, not the block, which in this case is an if statement.</p>
-                <code>if (true) { var x = 5; } console.log(x); // 5</code>
+                    <div id="c3">
+                <code>if (true) { var x = 5; } console.log(x); // 5</code></div>
                 <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
-                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
-                        defined</code>
+                <div id="c4">
+                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not<br>
+                        defined</code></div>
             </article>
         </section>
         <section id="s8">
-            <header><h1>Global variables</h1></header>
+            <header class="head1">
+                <h1>Global variables</h1>
+            </header>
             <article>
                 <p>Global variables are in fact properties of the global object. In web pages the global object is
                     window, so you can set and access global variables using the window.variable syntax.</p>
@@ -201,7 +271,9 @@
             </article>
         </section>
         <section id="s9">
-            <header><h1>Constants</h1></header>
+            <header class="head1">
+                <h1>Constants</h1>
+            </header>
             <article>
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant
                     identifier is the same as for a variable identifier: it must start with a letter, underscore or
@@ -226,7 +298,9 @@
             </article>
         </section>
         <section id="s10">
-            <header><h1>Data types</h1></header>
+            <header class="head1">
+                <h1>Data types</h1>
+            </header>
             <article>
                 <p>The latest ECMAScript standard defines seven data types:</p>
                 <ul>
@@ -259,7 +333,9 @@
             </article>
         </section>
         <section id="s11">
-            <header><h1>if...else statement</h1></header>
+            <header class="head1">
+                <h1>if...else statement</h1>
+            </header>
             <article>
                 <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else
                     clause to execute a statement if the condition is false. An if statement looks as follows:</p>
@@ -296,7 +372,8 @@
             </article>
         </section>
         <section id="s12">
-            <header><h1>while statement</h1>
+            <header class="head1">
+                <h1>while statement</h1>
             </header>
             <p>A while statement executes its statements as long as a specified condition evaluates to true. A while
                 statement looks as follows:
@@ -331,7 +408,8 @@
             <p>After completing the third pass, the condition n < 3 is no longer true, so the loop terminates. </p>
         </section>
         <section id="s13">
-            <header><h1>Function declarations</h1>
+            <header class="head1">
+                <h1>Function declarations</h1>
             </header>
             <article>
                 <p>A function definition (also called a function declaration, or function statement) consists of the
@@ -362,7 +440,9 @@
             </article>
         </section>
         <section id="s14">
-            <header><h1>Reference</h1></header>
+            <header class="head1">
+                <h1>Reference</h1>
+            </header>
             <ul>
                 <li>All the documentation in this page is taken from <a
                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">MDN</a>
