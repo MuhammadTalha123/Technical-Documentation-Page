@@ -44,7 +44,7 @@
 
         a {
             text-decoration: none;
-            color: rgb(138, 132, 132);
+            color: gray;
         }
 
         #head11 {
@@ -60,6 +60,7 @@
 
         article {
             padding: 0px 0px 0px 15px;
+            color: gray;
         }
 
         .c1 {
@@ -67,32 +68,38 @@
             height: 40px;
             padding: 15px 0px 15px 10px;
         }
-        .c2{
+
+        .c2 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 0px 10px;
         }
-        #c3{
+
+        #c3 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 0px 10px;
         }
-        #c4{
+
+        #c4 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 15px 10px;
         }
-        .c5{
+
+        .c5 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 0px 10px;
         }
-        #c6{
+
+        #c6 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 30px 10px;
         }
-        #c7{
+
+        #c7 {
             background-color: #f5f5f5;
             height: 40px;
             padding: 15px 0px 49px 10px;
@@ -215,14 +222,18 @@
             <header class="head1">
                 <h1>Variables</h1>
             </header>
-            <p>You use variables as symbolic names for values in your application. The names of variables, called
-                identifiers, conform to certain rules.</p>
-            <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent
-                characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the
-                characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
-            <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the Unicode
-                escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99, and
-                _name.</p>
+            <article>
+                <p>You use variables as symbolic names for values in your application. The names of variables, called
+                    identifiers, conform to certain rules.</p>
+                <p>A JavaScript identifier must start with a letter, underscore (_), or dollar sign ($); subsequent
+                    characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the
+                    characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</p>
+                <p>You can use ISO 8859-1 or Unicode letters such as å and ü in identifiers. You can also use the
+                    Unicode
+                    escape sequences as characters in identifiers. Some examples of legal names are Number_hits, temp99,
+                    and
+                    _name.</p>
+            </article>
         </section>
         <section id="s6">
             <header class="head1">
@@ -232,20 +243,20 @@
                 You can declare a variable in three ways:
                 <p>With the keyword var. For example,</p>
                 <div class="c2">
-                <code>var x = 42.</code></div>
+                    <code>var x = 42.</code></div>
                 <p>
                     This syntax can be used to declare both local and global variables.
                 </p>
                 <p>By simply assigning it a value. For example,</p>
                 <div class="c2">
-                <code>x = 42.</code></div>
+                    <code>x = 42.</code></div>
                 <p>
                     This always declares a global variable. It generates a strict JavaScript warning. You shouldn't use
                     this variant.
                 </p>
                 <p>With the keyword let. For example,</p>
                 <div class="c2">
-                <code> let y = 13.</code></div>
+                    <code> let y = 13.</code></div>
                 <p>
                     This syntax can be used to declare a block scope local variable. See Variable scope below.
                 </p>
@@ -264,11 +275,11 @@
                     within a block is local to the function (or global scope) that the block resides within. For example
                     the following code will log 5, because the scope of x is the function (or global context) within
                     which x is declared, not the block, which in this case is an if statement.</p>
-                    <div id="c3">
-                <code>if (true) { var x = 5; } console.log(x); // 5</code></div>
+                <div id="c3">
+                    <code>if (true) { var x = 5; } console.log(x); // 5</code></div>
                 <p>This behavior changes, when using the let declaration introduced in ECMAScript 2015.</p>
                 <div id="c4">
-                <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not<br>
+                    <code>if (true) { let y = 5; } console.log(y); // ReferenceError: y is not<br>
                         defined</code></div>
             </article>
         </section>
@@ -293,8 +304,8 @@
                 <p>You can create a read-only, named constant with the const keyword. The syntax of a constant
                     identifier is the same as for a variable identifier: it must start with a letter, underscore or
                     dollar sign and can contain alphabetic, numeric, or underscore characters.</p>
-                    <div class="c5">
-                <code>const PI = 3.14;</code></div>
+                <div class="c5">
+                    <code>const PI = 3.14;</code></div>
                 <p>A constant cannot change value through assignment or be re-declared while the script is running. It
                     has to be initialized to a value.
                 </p>
@@ -305,14 +316,14 @@
                     example:
                 </p>
                 <div id="c6">
-                <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL<br>
+                    <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL<br>
                     CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements<br>
                     }</code></div>
                 <p>However, object attributes are not protected, so the following statement is executed without
                     problems.
                 </p>
                 <div class="c5">
-                <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code></div>
+                    <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";</code></div>
             </article>
         </section>
         <section id="s10">
@@ -357,8 +368,8 @@
             <article>
                 <p>Use the if statement to execute a statement if a logical condition is true. Use the optional else
                     clause to execute a statement if the condition is false. An if statement looks as follows:</p>
-                    <div class="c5">
-                <code>if (condition) { statement_1; } else { statement_2; }</code></div>
+                <div class="c5">
+                    <code>if (condition) { statement_1; } else { statement_2; }</code></div>
                 <p>condition can be any expression that evaluates to true or false. See Boolean for an explanation of
                     what evaluates to true and false. If condition evaluates to true, statement_1 is executed;
                     otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including
@@ -368,14 +379,14 @@
                     follows:
                 </p>
                 <div class="c1">
-                <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;<br>
+                    <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;<br>
                 } else if (condition_n) { statement_n; } else { statement_last; }</code></div>
                 <p>In the case of multiple conditions only the first logical condition which evaluates to true will be
                     executed. To execute multiple statements, group them within a block statement ({ ... }) . In
                     general, it's good practice to always use block statements, especially when nesting if statements:
                 </p>
                 <div id="c7">
-                <code>if (condition) { statement_1_runs_if_condition_is_true;<br>
+                    <code>if (condition) { statement_1_runs_if_condition_is_true;<br>
                     statement_2_runs_if_condition_is_true; } else {<br>
                     statement_3_runs_if_condition_is_false;<br>
                     statement_4_runs_if_condition_is_false; }<br>
@@ -384,13 +395,13 @@
                     be confused with equality when glancing over the code. For example, do not use the following code:
                 </p>
                 <div class="c5">
-                <code>if (x = y) { /* statements here */ }
+                    <code>if (x = y) { /* statements here */ }
                     </code></div>
                 <p>If you need to use an assignment in a conditional expression, a common practice is to put additional
                     parentheses around the assignment. For example:
                 </p>
                 <div class="c5">
-                <code>if ((x = y)) { /* statements here */ }
+                    <code>if ((x = y)) { /* statements here */ }
                     </code></div>
             </article>
         </section>
@@ -402,7 +413,7 @@
                 statement looks as follows:
             </p>
             <div class="c5">
-            <code>while (condition) statement
+                <code>while (condition) statement
             </code></div>
             <p>If the condition becomes false, statement within the loop stops executing and control passes to the
                 statement following the loop.
@@ -417,7 +428,7 @@
             <p>The following while loop iterates as long as n is less than three:
             </p>
             <div class="c5">
-            <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }
+                <code>var n = 0; var x = 0; while (n < 3) { n++; x += n; }
             </code></div>
             <p>With each iteration, the loop increments n and adds that value to x. Therefore, x and n take on the
                 following values:
@@ -451,14 +462,14 @@
                 <p>For example, the following code defines a simple function named square:
                 </p>
                 <div class="c5">
-                <code>function square(number) { return number * number; }
+                    <code>function square(number) { return number * number; }
                 </code></div>
                 <p>The function square takes one argument, called number. The function consists of one statement that
                     says to return the argument of the function (that is, number) multiplied by itself. The return
                     statement specifies the value returned by the function.
                 </p>
                 <div class="c5">
-                <code>return number * number;
+                    <code>return number * number;
                 </code></div>
                 <p>Primitive parameters (such as a number) are passed to functions by value; the value is passed to the
                     function, but if the function changes the value of the parameter, this change is not reflected
